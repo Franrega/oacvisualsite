@@ -1,10 +1,29 @@
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="stylesheet" type="text/css" href="style.css" media=”screen” />
 		<title>My First Website</title>
+		<script src="https://jaredoac-orasenatdpltintegration01-ia.analytics.ocp.oraclecloud.com/public/dv/v1/embedding/standalone/embedding.js" type="application/javascript">	
+		</script>
 	</head>
 	<body>
-		<p>Here is a sample website where I can embed an OAC Visualization</p>
-        <script src="script.js"></script>
+		<div>
+			<p>Here is a sample website where I can embed an OAC Visualization</p>
+		</div>
+		<div><!--Vis should hopefully go here-->
+			<oracle-dv project-path="/@Catalog/shared/Shared Folder Example/Online Casino Project">
+			</oracle-dv>
+		</div>
+        
+		<!--<script src="script.js"></script>-->
+		
+		<script>
+			requirejs(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojcomposite', 'jet-composites/oracle-dv/loader'],function(ko) { 
+ 	 		ko.applyBindings(); 
+ 	 		}); 
+		</script>
+
+
+
 	</body>
 </html>
